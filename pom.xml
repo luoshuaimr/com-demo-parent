@@ -7,7 +7,10 @@
   <groupId>com.demo.parent</groupId>
   <artifactId>com-demo-parent</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+    <modules>
+        <module>com-demo-payment</module>
+    </modules>
+    <packaging>pom</packaging>
 
   <name>Maven</name>
   <!-- FIXME change it to the project's website -->
@@ -26,10 +29,10 @@
     <java.version>1.8</java.version>
     <junit.version>4.12</junit.version>
     <log4j.version>1.2.17</log4j.version>
-    <lombok.version>1.16.18</lombok.version>
-    <mysql.version>5.1.47</mysql.version>
-    <druid.vesion>1.1.16</druid.vesion>
-    <mybatis.spring.boot.version>1.3.0</mybatis.spring.boot.version>
+    <lombok.version>1.18.12</lombok.version>
+    <mysql.version>5.1.43</mysql.version>
+    <druid.vesion>1.1.20</druid.vesion>
+    <mybatis.spring.boot.version>1.3.1</mybatis.spring.boot.version>
   </properties>
 <!--子模块继承之后 起作用 锁定版本 子模块不用写版本号 只声明 不引用-->
   <dependencyManagement>
@@ -65,13 +68,13 @@
       <dependency>
         <groupId>com.alibaba</groupId>
         <artifactId>druid</artifactId>
-        <version>${druid.version}</version>
+        <version>${druid.vesion}</version>
       </dependency>
 
       <dependency>
         <groupId>org.mybatis.spring.boot</groupId>
         <artifactId>mybatis-spring-boot-starter</artifactId>
-        <version>${mybatis.spring.boot.version}}</version>
+        <version>${mybatis.spring.boot.version}</version>
       </dependency>
 
       <!-- https://mvnrepository.com/artifact/junit/junit -->
@@ -93,7 +96,7 @@
       <dependency>
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
-        <version>${log4j.version}</version>
+        <version>${lombok.version}</version>
       </dependency>
 
     </dependencies>
